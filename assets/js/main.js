@@ -7,4 +7,6 @@ if (s == "duckduckgo") { document.getElementById("searchbox").action = "/assets/
 }else{
     document.getElementById("searchbox").action = "/assets/html/baidu.html" 
 }
-console.log(localStorage.getItem("hitokoto"))
+if (localStorage.getItem("hitokoto")==false){
+    document.getElementById("hitokoto").style="display: none;"
+}
