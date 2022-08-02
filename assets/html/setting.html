@@ -24,12 +24,7 @@
         if (sname != null) {
           var sname_ = decodeURIComponent(sname);
         }
-            if (sname==true){
-                localStorage.setItem("hitokoto", true);
-            }
-            else{
-                localStorage.setItem("hitokoto", false)
-            }
+        localStorage.setItem("hitokoto", sname);
             location.replace("/setting.html");
         </script>
 </body>
