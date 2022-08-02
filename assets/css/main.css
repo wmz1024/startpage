@@ -42,8 +42,7 @@
     }
   }
   #weather-view-he{
-	transform:translateY(-100%);/**上移元素**/
-	-ms-transform:translateY(-100%);
-	-webkit-transform:translateY(-100%);
-
+    position:relative; 
+    left:150px;
+    bottom:20px;
   }
