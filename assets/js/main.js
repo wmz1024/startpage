@@ -9,7 +9,7 @@ if (s == "duckduckgo") { document.getElementById("searchbox").action = "/assets/
 }
 if (localStorage.getItem("hitokoto")=='false'){document.getElementById("hitokoto_text").style="display: none;"}
 if(navigator.serviceWorker){
-    navigator.serviceWorker.register('sw.js').then(function(reg){
+    navigator.serviceWorker.register('/assets/js/sw.js').then(function(reg){
         if(reg.installing){
             console.log('client-installing');
         }else if(reg.active){
