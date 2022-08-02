@@ -60,7 +60,7 @@
       <input type="text" placeholder="搜索.." name="q" id="searchinput">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
-    <p id="hitokoto">:D等待一言加载</p>
+    <p id="hitokoto" style="text-align: center;">:D等待一言加载</p>
   </div>
   <div class="mdui-bottom-nav" style="text-align: center;">
     <p>Powered ❤️ Wmz1024 version: beta 0.0.1</p>
@@ -71,8 +71,7 @@
       <script>    fetch('https://v1.hitokoto.cn')
         .then(response => response.json())
         .then(data => {
-          const hitokoto = document.getElementById('hitokoto_text')
-          hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+          const hitokoto = document.getElementById('hitokoto')
           hitokoto.innerText = data.hitokoto
         })
         .catch(console.error)
