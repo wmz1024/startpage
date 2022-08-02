@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main"></div>
+    <script>function errorOutput(){
+        var strVar = "";
+          strVar += "<h1>出现错误<\/h1><p>获取文件错误<\/p><p>可能因为您的网络出现问题 或者是您访问的参数有问题<\/p>\n";
+        document.getElementById("main").innerHTML = strVar;
+      }
+      
+      function GetQueryString(api) {
+          var reg = new RegExp("(^|&)" + api + "=([^&]*)(&|$)");
+          var r = decodeURI(window.location.search.substr(1)).match(reg);
+          if (r != null) return unescape(r[2]);
+          return null;
+        }
+        var sname = GetQueryString("q");
+        if (sname != null) {
+          var sname_ = decodeURIComponent(sname);
+        }
+        if (sname != "") {
+            location.replace("https://duckduckgo.com/?q="+sname)
+        } else {
+          location.replace("/");
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>普通的起始页</title>
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+</head>
+<body
+  class="
+    mdui-drawer-body-left
+    mdui-appbar-with-toolbar
+    mdui-theme-primary-indigo
+    mdui-theme-accent-pink
+    mdui-theme-layout-dark"
+  id="p-d"
+>
+<header class="appbar mdui-appbar mdui-appbar-fixed">
+  <div class="mdui-toolbar mdui-color-theme">
+    <span
+      class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+      mdui-drawer="{target: '#drawer', swipe: true}"
+    >
+      <i class="mdui-icon material-icons">menu</i>
+    </span>
+    <a href="/" class="mdui-typo-headline">一个普通的起始页</a>
+    <a href="./" class="mdui-typo-title mdui-hidden-xs">Powered ❤️ Wmz1024</a>
+    <div class="mdui-toolbar-spacer"></div>
+  </div>
+</header>
+<div class="mdui-drawer" id="drawer">
+    <ul class="mdui-list">
+    <a href="/">
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">folder</i>
+        <div class="mdui-list-item-content">主页</div>
+      </li>
+    </a>
+    <a href="/setting.html">
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">settings</i>
+        <div class="mdui-list-item-content">设置</div>
+      </li>
+    </a>
+    </ul>
+  </div>
+
+  <div id="main">
+    <form class="example" action="/" id="searchbox">
+      <input type="text" placeholder="搜索.." name="q" id="searchinput">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+      <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+      <script src="/assets/js/main.js"></script>
+</body>
+</html>

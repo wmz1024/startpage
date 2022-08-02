@@ -1,0 +1,43 @@
+   * {
+    box-sizing: border-box;
+  }
+  #searchbox{
+    padding: 24px;
+  }
+  
+  #searchbox.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  #searchbox.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  #searchbox.example button:hover {
+    background: #0b7dda;
+  }
+  
+  #searchbox.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  @media only screen and (min-width: 768.1px){
+    #searchbox{
+        margin:auto;max-width:500px
+    }
+  }
