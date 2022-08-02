@@ -6,10 +6,10 @@ function search(api){
 }
 var s = localStorage.getItem("hitokoto");
 if (s!=null){
-    if(s==true){
+    if(s=='true'){
         document.getElementById("open_h").selected="selected"
     }
-    if(s==false){
+    if(s=='false'){
         document.getElementById("close_h").selected="selected"
     }
 }
