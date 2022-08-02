@@ -72,7 +72,7 @@
         .then(response => response.json())
         .then(data => {
           const hitokoto = document.getElementById('hitokoto')
-          hitokoto.innerText = data.hitokoto
+          hitokoto.innerText = "一言："+data.hitokoto
         })
         .catch(console.error)
         </script>
