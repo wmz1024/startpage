@@ -17,7 +17,3 @@ else{
     localStorage.setItem("hitokoto", true);
     document.getElementById("open_h").selected
 }
-function h(api){
-    inst1.open();
-    localStorage.setItem("hitokoto", api);
-}

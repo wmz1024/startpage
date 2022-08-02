@@ -7,3 +7,4 @@ if (s == "duckduckgo") { document.getElementById("searchbox").action = "/assets/
 }else{
     document.getElementById("searchbox").action = "/assets/html/baidu.html" 
 }
+var hitokoto = localStorage.getItem("hitokoto");if (hitokoto!=true){document.getElementById("hitokoto").style="display:none;"}
