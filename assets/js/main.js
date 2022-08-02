@@ -8,3 +8,12 @@ if (s == "duckduckgo") { document.getElementById("searchbox").action = "/assets/
     document.getElementById("searchbox").action = "/assets/html/baidu.html" 
 }
 if (localStorage.getItem("hitokoto")=='false'){document.getElementById("hitokoto_text").style="display: none;"}
+if(navigator.serviceWorker){
+    navigator.serviceWorker.register('sw.js').then(function(reg){
+        if(reg.installing){
+            console.log('client-installing');
+        }else if(reg.active){
+            console.log('client-active')
+        }
+    })
+}
