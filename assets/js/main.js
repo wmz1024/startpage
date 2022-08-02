@@ -7,4 +7,4 @@ if (s == "duckduckgo") { document.getElementById("searchbox").action = "/assets/
 }else{
     document.getElementById("searchbox").action = "/assets/html/baidu.html" 
 }
-if (localStorage.getItem("hitokoto")==false){document.getElementById("hitokoto").innerHTML="#hitokoto_text{display: none;}"}else{document.getElementById("hitokoto").innerHTML="#hitokoto_text{text-align: center;}"}
+if (localStorage.getItem("hitokoto")=='false'){document.getElementById("hitokoto").innerHTML="#hitokoto_text{display: none;}"}else{document.getElementById("hitokoto").innerHTML="#hitokoto_text{text-align: center;}"}
