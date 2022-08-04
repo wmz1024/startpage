@@ -22,7 +22,7 @@ if (localStorage.getItem("mail")!=null){
     if(localStorage.getItem("mail")=='qicq'){document.getElementById("mailto").href="https://mail.qq.com/"}
     if(localStorage.getItem("mail")=='gmail'){document.getElementById("mailto").href="https://gmail.com/"}}else{document.getElementById("mailto").href="https://gmail.com/"}
 let date = new Date();
-if (localStorage.getItem("username")!=null){var usernametext=localStorage.getItem("username")}else{var username="无名氏"}
+if (localStorage.getItem("username")!=null){var usernametext=localStorage.getItem("username")}else{var usernametext="无名氏"}
 if (date.getHours() >= 6 && date.getHours() < 12) {
     mdui.snackbar({
         message: '早上好 '+usernametext,
