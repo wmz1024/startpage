@@ -17,3 +17,19 @@ else{
     localStorage.setItem("hitokoto", true);
     document.getElementById("open_h").selected="selected"
 }
+var s = localStorage.getItem("mail");
+if (s!=null){
+    if(s=='gmail'){
+        document.getElementById("mail3").selected="selected"
+    }
+    if(s=='n163'){
+        document.getElementById("mail1").selected="selected"
+    }
+    if(s=='qicq'){
+        document.getElementById("mail2").selected="selected"
+    }
+}
+else{
+    localStorage.setItem("mail", 'gmail');
+    document.getElementById("mail3").selected="selected"
+}

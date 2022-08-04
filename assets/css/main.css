@@ -1,55 +1,78 @@
-   * {
-    box-sizing: border-box;
-  }
-  #searchbox{
-    padding: 24px;
-  }
-  
-  #searchbox.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-  }
-  
-  #searchbox.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-  }
-  
-  #searchbox.example button:hover {
-    background: #0b7dda;
-  }
-  
-  #searchbox.example::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+* {
+  box-sizing: border-box;
+}
+#searchbox{
+  padding: 24px;
+}
 
-  @media only screen and (min-width: 768.1px){
-    #searchbox{
-        margin:auto;max-width:500px
-    }
-  }
-  #weather-view-he{
-    position:relative; 
-    left:150px;
-    top:200px
-  }
-.card1{
-  width: 160px;
-  height: 250px;
+#searchbox.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
   float: left;
-  margin: 16px;
-  padding: 15px;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+#searchbox.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+#searchbox.example button:hover {
+  background: #0b7dda;
+}
+
+#searchbox.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media only screen and (min-width: 768.1px){
+  #searchbox{
+      margin:auto;max-width:500px
+  }
+}
+#weather-view-he{
+  position:relative; 
+  left:150px;
+  top:200px
+}
+.card1{
+float: left;
+margin: 16px;
+padding: 15px;
+width: 150px;
+height: 200px;
+}
+.card1 img{
+height: 130px;
+width: 130px;
+}
+a:link {
+color: 	white;
+text-decoration: none;
+}
+
+a:visited {
+color: 	white;
+text-decoration: none;
+}
+
+a:hover {
+color: 	white;
+text-decoration: none;
+}
+
+a:active {
+color: 	white;
+text-decoration: none;
 }

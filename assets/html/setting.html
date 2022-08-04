@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js?id=JlqEHSeuiDsHqYvm&ck=JlqEHSeuiDsHqYvm&autoTrack=true"></script>
+<body>
     <div id="main"></div>
     <script>function errorOutput(){
         var strVar = "";
@@ -29,6 +29,19 @@
             }
             else{
                 localStorage.setItem("hitokoto", 'false')
+            }
+            var sname1 = GetQueryString("mail");
+        if (sname1 != null) {
+          var sname_1 = decodeURIComponent(sname1);
+        }
+            if (sname1=='1'){
+                localStorage.setItem("mail", 'n163');
+            }
+            if (sname1=='2'){
+                localStorage.setItem("mail", 'qicq')
+            }
+            if (sname1=='3'){
+                localStorage.setItem("mail", 'gmail')
             }
             location.replace("/setting.html");
         </script>

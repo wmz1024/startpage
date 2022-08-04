@@ -17,3 +17,7 @@ if(navigator.serviceWorker){
         }
     })
 }
+if (localStorage.getItem("mail")!=null){
+    if(localStorage.getItem("mail")=='n163'){document.getElementById("mailto").href="https://mail.163.com/"}
+    if(localStorage.getItem("mail")=='qicq'){document.getElementById("mailto").href="https://mail.qq.com/"}
+    if(localStorage.getItem("mail")=='gmail'){document.getElementById("mailto").href="https://gmail.com/"}}else{document.getElementById("mailto").href="https://gmail.com/"}
