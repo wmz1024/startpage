@@ -61,8 +61,11 @@
     <p>您的名字</p>
     <p id="whoami"></p>
     <form action="/assets/html/setting.html" method="get">
-      <input type="text" name="username" >
-      <input type="submit" value="确定" />
+      <div class="mdui-textfield mdui-textfield-floating-label">
+        <label class="mdui-textfield-label">UserName</label>
+        <input class="mdui-textfield-input" type="text" name="username"/>
+      </div>
+      <input type="submit" value="确定" class="mdui-btn mdui-color-theme-accent mdui-ripple" />
       </form>
     <p>调整首要搜索引擎</p>
     <div class="mdui-dialog" id="dialog">
@@ -82,7 +85,7 @@
         <option value="true" id="open_h">启用</option>
         <option value="false" id="close_h">禁用</option>
       </select>
-      <input type="submit" value="确定" />
+      <input type="submit" value="确定" class="mdui-btn mdui-color-theme-accent mdui-ripple" />
       </form>
       <p>邮箱设置</p>
       <form action="/assets/html/setting.html" method="get">
@@ -91,7 +94,7 @@
           <option value="2" id="mail2">QQ邮箱</option>
           <option value="3" id="mail3">Gmail</option>
         </select>
-        <input type="submit" value="确定" />
+        <input type="submit" value="确定" class="mdui-btn mdui-color-theme-accent mdui-ripple" />
         </form>
   </div>
   <div class="mdui-bottom-nav" style="text-align: center;">
