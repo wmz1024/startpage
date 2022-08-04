@@ -33,3 +33,4 @@ else{
     localStorage.setItem("mail", 'gmail');
     document.getElementById("mail3").selected="selected"
 }
+document.getElementById("whoami").innerHTML=localStorage.getItem("username")

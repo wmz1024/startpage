@@ -43,7 +43,14 @@
             if (sname1=='3'){
                 localStorage.setItem("mail", 'gmail')
             }
+            if (sname2 != null) {
+          var sname_2 = decodeURIComponent(sname2);
+        }
+        if(sname2!=''){
+            localStorage.setItem("username", sname2)
+        }
             location.replace("/setting.html");
+
         </script>
 </body>
 </html>
