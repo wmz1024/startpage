@@ -42,3 +42,14 @@ if (date.getHours() >= 6 && date.getHours() < 12) {
       });
       
 }
+if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+  if(window.navigator.onLine){
+    console.log("Network is OK")
+  }else{
+    mdui.snackbar({
+        message: '您未联网，请链接互联网',
+        position: 'right-top',
+      })
+  }

@@ -1,4 +1,7 @@
 var $ = mdui.$;
+if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
 var inst1 = new mdui.Dialog('#dialog');
 function search(api){
     inst1.open();
