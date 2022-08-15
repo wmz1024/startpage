@@ -1,4 +1,48 @@
-const RUNTIME = 'wmz'
+const currentCache = "22w27a14";
+self.addEventListener("install", e => {
+	self.skipWaiting();
+	e.waitUntil(caches.open(currentCache).then(cache => cache.addAll([
+		"./",
+		"assets/js/m1.js",
+		"assets/js/main.js",
+		"assets/js/setting.js",
+		"about.html",
+		"setting.html",
+		"https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js",
+		"https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css",
+		"https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css",
+    "assets/css/main.css"
+	])));
+});
+self.addEventListener("fetch", e => {
+	if (
+		!e.request.url.endsWith(".jpg") &&
+		!e.request.url.endsWith(".mp4") &&
+		!e.request.url.endsWith(".png") &&
+		!e.request.url.endsWith(".webm") &&
+		!e.request.url.endsWith(".webp")&&!e.request.url.endsWith(".jfif")
+	) {
+		e.respondWith(caches.match(e.request).then(response => {
+			return response || fetch(e.request).catch(() => { });
+		}).then(data => {
+			return data || new Response(null, {
+				status: 502,
+				statusText: "Bad Gateway"
+			});
+		}));
+	}
+});
+self.addEventListener("activate", e => {
+	e.waitUntil(caches.keys().then(cacheNames => {
+		return Promise.all(cacheNames.map(cacheName => {
+			if (cacheName != currentCache) {
+				return caches.delete(cacheName);
+			}
+		}));
+	}));
+});
+
+const RUNTIME = 'w1024'
 const HOSTNAME_WHITELIST = [
   self.location.hostname,
   'fonts.gstatic.com',

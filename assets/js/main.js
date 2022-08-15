@@ -1,3 +1,4 @@
+var $ = mdui.$;
 var s = localStorage.getItem("search");
 if(s!=null){
 if (s == "bing") { document.getElementById("searchbox").action = "/assets/html/bing.html" }
@@ -49,7 +50,9 @@ if (typeof navigator.serviceWorker !== 'undefined') {
     console.log("Network is OK")
   }else{
     mdui.snackbar({
-        message: '您未联网，请链接互联网',
-        position: 'right-top',
-      })
+        message: '您已离线！ 请链接互联网 否则资源无法加载',
+        position: 'right-bottom',
+      });
+document.getElementById("hitokoto_text").innerHTML="您已离线！ 请链接互联网 否则资源无法加载"
+
   }
