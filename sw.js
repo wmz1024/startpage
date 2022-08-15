@@ -1,4 +1,4 @@
-const RUNTIME = 'docsify'
+const RUNTIME = 'wmz'
 const HOSTNAME_WHITELIST = [
   self.location.hostname,
   'fonts.gstatic.com',
