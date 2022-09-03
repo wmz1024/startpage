@@ -43,3 +43,14 @@ function c1(){
         localStorage.setItem("list",cache)
     }
 }
+function c2(){
+    localStorage.setItem("newuser",true)
+    window.location.replace("/")
+}
+var un=localStorage.getItem("newuser")
+if (un==null){
+    document.getElementById("title1").innerHTML="欢迎使用普通的起始页！"
+    document.getElementById("title2").innerHTML="设置您的专属起始页"
+    document.getElementById("c002").innerHTML='<input type="submit" value="开始使用" class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="c2()" />'
+    console.log("Welcome to OOBE!!!")
+}
