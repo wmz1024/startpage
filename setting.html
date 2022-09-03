@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="/assets/css/main.css"/>
+    <link rel="stylesheet" href="/assets/css/setting.css" />
 </head>
 <body
   class="
@@ -55,19 +56,23 @@
     </a>
     </ul>
   </div>
-
+    
   <div id="main">
+      <div class="c001">
     <h1>设置</h1>
-    <a href="/assets/html/doc/#/?id=设置"><button class="mdui-btn mdui-color-theme-accent mdui-ripple">设置文档</button></a>
+    <a href="/assets/html/doc/#/?id=设置"><button class="mdui-btn mdui-color-theme-accent mdui-ripple">设置文档</button></a></div>
+    <div class="c001">
     <p>您的名字</p>
     <p id="whoami"></p>
     <form action="/assets/html/setting.html" method="get">
       <div class="mdui-textfield mdui-textfield-floating-label" style="width: 300px;">
         <label class="mdui-textfield-label">UserName</label>
-        <input class="mdui-textfield-input" type="text" name="username"/>
+        <input class="mdui-textfield-input" type="text" name="username" id="inputUserName"/>
       </div>
       <input type="submit" value="确定" class="mdui-btn mdui-color-theme-accent mdui-ripple" />
       </form>
+    </div>
+    <div class="c001">
     <p>调整首要搜索引擎</p>
     <div class="mdui-dialog" id="dialog">
         <div class="mdui-dialog-title">更改完毕</div>
@@ -80,6 +85,8 @@
     <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="search('baidu')">百度</button>
     <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="search('google')">Google</button>
     <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="search('duckduckgo')">DuckDuckGo</button>
+  </div>
+  <div class="c001">
     <p>一言语句功能</p>
     <form action="/assets/html/setting.html" method="get" target="_blank">
       <select name="hitokoto" class="mdui-select">
@@ -88,6 +95,8 @@
       </select>
       <input type="submit" value="确定" class="mdui-btn mdui-color-theme-accent mdui-ripple" />
       </form>
+    </div>
+    <div class="c001">
       <p>邮箱设置</p>
       <form action="/assets/html/setting.html" method="get">
         <select name="mail" class="mdui-select">
@@ -97,6 +106,8 @@
         </select>
         <input type="submit" value="确定" class="mdui-btn mdui-color-theme-accent mdui-ripple" />
         </form>
+      </div>
+      <div class="c001">
         <p>设置卡片</p><p id="editcard1"></p>
         <form method="get">
           <div class="mdui-textfield mdui-textfield-floating-label">
@@ -104,7 +115,7 @@
             <textarea class="mdui-textfield-input" rows="5" placeholder="Message" name="list" id="list1"></textarea>
           </div>
           <input type="submit" value="确定" class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="c1()" />
-          </form>
+          </form></div>
   </div>
   <div class="mdui-bottom-nav" style="text-align: center;">
     <p>Powered ❤️ Wmz1024 version: beta 0.0.1</p>

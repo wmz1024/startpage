@@ -27,19 +27,19 @@ if (localStorage.getItem("username")!=null){var usernametext=localStorage.getIte
 if (date.getHours() >= 6 && date.getHours() < 12) {
     mdui.snackbar({
         message: '早上好 '+usernametext,
-        position: 'right-top',
+        position: 'right-bottom',
       });
       
 } else if (date.getHours() >= 12 && date.getHours() < 18) {
     mdui.snackbar({
         message: '下午好 '+usernametext,
-        position: 'right-top',
+        position: 'right-bottom',
       });
       
 } else {
     mdui.snackbar({
         message: '晚上好 '+usernametext,
-        position: 'right-top',
+        position: 'right-bottom',
       });
       
 }
