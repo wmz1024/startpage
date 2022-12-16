@@ -1,5 +1,5 @@
-if (localStorage.getItem("c4")==null){
-    if (localStorage.getItem("c4")==""){
+if (localStorage.getItem("c4")!=null){
+    if (localStorage.getItem("c4")!=""){
 packasona = eval("packJson = ["+localStorage.getItem("c4")+"];")
 for(var pa in packasona){//遍历json数组时，这么写p为索引，0,1
     var m2 = packasona[pa]
