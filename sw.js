@@ -1,4 +1,4 @@
-const currentCache = "22w27a15";
+const currentCache = "22w27a16";
 self.addEventListener("install", e => {
 	self.skipWaiting();
 	e.waitUntil(caches.open(currentCache).then(cache => cache.addAll([

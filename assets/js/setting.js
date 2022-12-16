@@ -1,5 +1,5 @@
 var $ = mdui.$;
-if (typeof navigator.serviceWorker !== 'undefined') {navigator.serviceWorker.register('sw.js')}
+//if (typeof navigator.serviceWorker !== 'undefined') {navigator.serviceWorker.register('sw.js')}
 var inst1 = new mdui.Dialog('#dialog');
 function search(api) {
     inst1.open();
@@ -68,4 +68,11 @@ function checkupdate(){
       console.log('sw unregister 2');
     });
     location.reload ()
+}
+document.getElementById("list2").value = localStorage.getItem("c4");
+function c4(){
+        var cache = document.getElementById("list2").value
+        if (cache != null) {
+            localStorage.setItem("c4", cache)
+        }
 }
