@@ -10,3 +10,6 @@
         #inputUserName{
             width: 250px;
         }
+        .mdui-btn{
+            margin: 3px;
+        }
