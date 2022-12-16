@@ -1,4 +1,4 @@
-const currentCache = "22w27a14";
+const currentCache = "22w27a15";
 self.addEventListener("install", e => {
 	self.skipWaiting();
 	e.waitUntil(caches.open(currentCache).then(cache => cache.addAll([
@@ -41,6 +41,21 @@ self.addEventListener("activate", e => {
 		}));
 	}));
 });
+
+const handle = async (req) => {
+  return fetch(req.url).then(function (res) {
+      if (!res) { throw 'error' } //1
+      return caches.open(currentCache).then(function (cache) {
+          cache.delete(req);
+          cache.put(req, res.clone());
+          return res;
+      });
+  }).catch(function (err) {
+      return caches.match(req).then(function (resp) {
+          return resp || caches.match(new Request('/')) //2
+      })
+  })
+}
 
 const RUNTIME = 'w1024'
 const HOSTNAME_WHITELIST = [
@@ -117,3 +132,18 @@ self.addEventListener('fetch', event => {
     )
   }
 })
+
+const handle2 = async (req) => {
+  return fetch(req.url).then(function (res) {
+      if (!res) { throw 'error' } //1
+      return caches.open(RUNTIME).then(function (cache) {
+          cache.delete(req);
+          cache.put(req, res.clone());
+          return res;
+      });
+  }).catch(function (err) {
+      return caches.match(req).then(function (resp) {
+          return resp || caches.match(new Request('/')) //2
+      })
+  })
+}

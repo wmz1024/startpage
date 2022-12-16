@@ -56,3 +56,16 @@ if (un == null) {
 function advset() {
     document.getElementById("advsetting").style=""
 }
+function checkupdate(){
+    const serviceWorker = navigator.serviceWorker;
+    serviceWorker.getRegistrations ? serviceWorker.getRegistrations().then(function(sws) {
+      sws.forEach(function(sw) {
+        sw.unregister();
+        console.log('sw unregister 1');
+      });
+    }) : serviceWorker.getRegistration && serviceWorker.getRegistration().then(function(sw) {
+      sw && sw.unregister();
+      console.log('sw unregister 2');
+    });
+    location.reload ()
+}
